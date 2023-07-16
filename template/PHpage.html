@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Project Head</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            margin-top: 40px;
+            background: #000000;
+            background: linear-gradient(to bottom right, #000000 0%, #27445C 100%);
+        }
+        
+        .b {
+            display: flex;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        h1 {
+            color: rgba(31, 181, 172, .9);
+            text-align: center;
+            font-family: "Times New Roman";
+            font-size: 40px;
+        }
+        
+        th {
+            color: rgba(31, 181, 172, .9);
+            font-family: "Times New Roman";
+            font-size: 10px;
+        }
+        
+        ul {
+            position: relative;
+            margin: 100;
+            padding: 0;
+            display: flex;
+        }
+        
+        ul li {
+            position: relative;
+            list-style: none;
+            width: 60px;
+            height: 60px;
+            margin: 0 30px;
+            transform: rotate(-30deg) skew(25deg);
+        }
+        
+        ul li span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: teal;
+            transition: 0.5s;
+            display: flex !important;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 30px !important;
+        }
+        
+        ul li:hover span:nth-child(5) {
+            transform: translate(40px, -40px);
+            opacity: 1;
+        }
+        
+        ul li:hover span:nth-child(4) {
+            transform: translate(30px, -30px);
+            opacity: 0.8;
+        }
+        
+        ul li:hover span:nth-child(3) {
+            transform: translate(20px, -20px);
+            opacity: 0.6;
+        }
+        
+        ul li:hover span:nth-child(2) {
+            transform: translate(10px, -10px);
+            opacity: 0.4;
+        }
+        
+        ul li:hover span:nth-child(1) {
+            transform: translate(0, 0);
+            opacity: 0.2;
+        }
+        /* ul li:nth-child(1) span {
+      background: teal;
+  }
+   */
+    </style>
+</head>
+
+<body>
+    <div class='b'>
+        <ul>
+            <li>
+                <a href="PHpage/projectPH">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span class="fab fa-angellist"></span>
+                </a>
+
+            </li>
+        </ul>
+        <h1>Let's Start a new Project</h1>
+    </div>
+    <h1>Existing Projects</h1>
+    <div class="table-responsive">
+        <table id="example-datatable" class="table table-vcenter table-condensed table-bordered">
+            <tr>
+                <th>name</th>
+                <th>description</th>
+                <th>cost</th>
+                <th>time_period</th>
+                <th>project_id</th>
+                <th>PROJECTHEAD_ID</th>
+                <th>EMP_ID</th>
+                <th>CLIENT_ID</th>
+            </tr>
+            <tbody>
+                {% for uu in t %}
+                <tr>
+                    <td>{{c.name}}</td>
+                    <td>{{item.description}}</td>
+                    <td>{{item.cost}}</td>
+                    <td>{{item.time_period}}</td>
+                    <td>{{item.project_id}}</td>
+                    <td>{{item.PROJECTHEAD_ID}}</td>
+                    <td>{{item.EMP_ID}}</td>
+                    <td>{{item.CLIENT_ID}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+</body>
+
+</html>
